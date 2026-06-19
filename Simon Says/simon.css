@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #1dd1a1, #f368e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.instructions {
+    margin: 1rem auto;
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+h2 {
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+}
+.btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: none;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+}
+.btn:hover {
+    filter: brightness(1.1);
+}
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line-one, .line-two {
+    display: flex;
+}
+.yellow {
+    background-color: #feca57;
+    box-shadow: 0 8px 20px rgba(254, 202, 87, 0.4);
+}
+.red {
+    background-color: #ff6b6b;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+.green {
+    background-color: #1dd1a1;
+    box-shadow: 0 8px 20px rgba(29, 209, 161, 0.4);
+}
+.purple {
+    background-color: #f368e0;
+    box-shadow: 0 8px 20px rgba(243, 104, 224, 0.4);
+}
+.flash {
+    background-color: #ffffff;
+    box-shadow: 0 0 30px #ffffff;
+}
+.userflash {
+    background-color: #c8d6e5;
+    box-shadow: 0 0 30px #c8d6e5;
+}
