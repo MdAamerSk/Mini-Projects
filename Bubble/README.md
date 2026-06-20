@@ -73,8 +73,8 @@ Bubble/
 *(Replace with your actual GitHub Pages link if available)*
 
 ### Preview Image
-![Bubble Pop Challenge Preview](./preview.png)
-*(Add a screenshot of the game interface here)*
+<img width="1317" height="910" alt="image" src="https://github.com/user-attachments/assets/000c7b3f-1a69-43d8-9c8e-8bdac709b8f7" />
+![Uploading image.png…]()
 
 ---
 
