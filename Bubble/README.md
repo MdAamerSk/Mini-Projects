@@ -69,12 +69,10 @@ Bubble/
 ## 🌐 Live Demo & Preview
 
 ### Live Link
-🔗 **[Play Bubble Pop Challenge](https://mdaamersк.github.io/Mini-Projects/Bubble/bubble.html)**
-*(Replace with your actual GitHub Pages link if available)*
+https://mdaamersk.github.io/Mini-Projects/Bubble/bubble.html
 
 ### Preview Image
 <img width="1317" height="910" alt="image" src="https://github.com/user-attachments/assets/000c7b3f-1a69-43d8-9c8e-8bdac709b8f7" />
-![Uploading image.png…]()
 
 ---
 
