@@ -1,0 +1,192 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling entirely */
+    background: rgb(202, 238, 202);
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px; 
+}
+
+/* Use CSS Grid for the panel to naturally separate header and body */
+#pannel {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Top bar sizes to content, game area takes the rest */
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    border-radius: 20px; 
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+
+#ptop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: rgba(13, 76, 4, 0.744);
+    gap: 5px;
+}
+
+.elem {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px;
+}
+
+.elem h2 {
+    color: white; 
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem); 
+    text-transform: capitalize;
+}
+
+.box {
+    color: white;
+    font-weight: 600;
+    /* Scalable font and padding using clamp */
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(5px, 2vw, 10px) clamp(10px, 4vw, 20px);
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#pbtm {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start; 
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: clamp(10px, 3vw, 20px);
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling inside bottom panel */
+}
+
+/* Keep bubble fixed size so JS dynamic capacity calculation remains accurate */
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; 
+    height: 60px;
+    background-color: rgb(72, 104, 72);
+    color: #fff;
+    border-radius: 50%;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.bubble:hover, .bubble:active {
+    cursor: pointer;
+    background-color: rgb(50, 75, 50);
+    transform: scale(0.95); 
+}
+
+/* Screens */
+#start-screen, #game-over-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: clamp(10px, 4vw, 20px);
+    background-color: black;
+    color: white;
+}
+
+#rules {
+    margin: 15px 0;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+#rules h2 {
+    margin-bottom: 10px;
+    color: rgb(72, 104, 72);
+}
+
+.game-btn {
+    /* Scalable padding and font */
+    padding: clamp(10px, 3vw, 15px) clamp(20px, 5vw, 40px);
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-weight: bold;
+    background-color: rgb(72, 104, 72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+.game-btn:hover, .game-btn:active {
+    background-color: rgb(50, 75, 50);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.game-title {
+    /* Scalable title to prevent overflow */
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: clamp(10px, 3vw, 20px);
+    color: rgb(72, 104, 72);
+    line-height: 1.2;
+}
+
+.final-score {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin: 20px 0;
+    color: rgb(72, 104, 72);
+}
+
+/* --- Media Queries --- */
+
+/* Desktop / Larger Tablets (769px and up) */
+@media (min-width: 769px) {
+    #pannel {
+        height: 90%; /* Return to relative height on large screens */
+        border-radius: 50px;
+    }
+    
+    #ptop {
+        padding: 20px 30px;
+    }
+
+    .elem {
+        flex-direction: row; /* Side-by-side layout on desktop */
+        gap: 15px;
+    }
+    
+    #rules {
+        margin: 20px 0;
+    }
+}
